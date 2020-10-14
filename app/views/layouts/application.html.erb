@@ -24,7 +24,7 @@
     <% if user_signed_in? %>
     <a href="/users/<%= current_user.id %>" class="menu-item"><i class="fa fa-user "></i></a>
     <% end %>
-    
+    <a href="/users/sign_in.html" class="menu-item"> <i class="fa fa-sign-in-alt" ></i> </a>
     <a href="/posts/new.html" class="menu-item"> <i class="fa fa-folder-plus" ></i> </a>
     <a href="/posts/all.html" class="menu-item"> <i class="fa fa-camera-retro" data-fa-transform="shrink-8 up-6"></i> </a>
     
