@@ -1,0 +1,28 @@
+<div class="sub">
+<div class="spa"> </div><br>
+<h3>new post</h3>
+
+<%= form_for @post do |f| %>
+ 
+ 
+  <div class="title">
+    <%= f.label :image %> </div><br>
+    <div class="field1">
+    <%= f.file_field :image, class: "image"%>
+  </div>
+
+  <div class="title">
+    <%= f.label :text %></div><br>
+    <br>
+    <div class="field2">
+    <%= f.text_area :body, :size => 100 %>
+  </div>
+  <br>
+  <div class "pulld">
+  <%= f.select :season, [["spring", "1"], ["summer", "2"], ["autumn", "3"], ["winter", "4"]], include_blank: "パーソナルカラー" %><br>
+ </div>
+  <%= f.submit "投稿する" %>
+<% end %>
+<div class="lin3">
+<%= link_to "投稿一覧に戻る", posts_path %></div>
+</div>

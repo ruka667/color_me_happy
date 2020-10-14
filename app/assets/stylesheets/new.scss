@@ -1,0 +1,72 @@
+textarea{
+    height: 100px;
+    width: 700px;
+}
+
+.new {
+    text-align: center;   
+}
+
+.title {
+    font-size: 30px;
+    text-align: center;
+    margin: 30px 500px 0 500px;
+    background-color: rgba(128, 128, 128, 0.122);
+}
+
+.field1 {
+  margin-left: 40%;
+}
+
+.field2{
+    margin-left: 22%;
+  }
+
+.sub input[type="submit"] {
+    -webkit-transition: all 200ms cubic-bezier(0.390, 0.500, 0.150, 1.360);
+    -moz-transition: all 200ms cubic-bezier(0.390, 0.500, 0.150, 1.360);
+    -ms-transition: all 200ms cubic-bezier(0.390, 0.500, 0.150, 1.360);
+    -o-transition: all 200ms cubic-bezier(0.390, 0.500, 0.150, 1.360);
+    transition: all 200ms cubic-bezier(0.390, 0.500, 0.150, 1.360);
+    display: block;
+    margin: 20px auto;
+    max-width: 180px;
+    text-decoration: none;
+    font-size: 15px;
+    padding: 15px 22.5px;
+    color: rgba(30, 22, 54, 0.6);
+    opacity: 0.8;
+    
+}
+
+
+.sub input[type="submit"]:hover {
+    color: rgba(255, 255, 255, 0.85);
+    box-shadow: gray 0 0px 0px 40px inset;
+
+}
+select {
+    margin-left: 42%;
+    text-align: center;
+    width: 200px;
+    height: 50px;
+   background-color: rgba(184, 183, 183, 0.496);
+}
+
+
+
+.new img {
+    margin-left: 1px;
+    width: 300px;
+    height: 110px;
+}
+
+.lin3 a{
+text-decoration: none;
+color: black;
+font-size: 18px;
+}
+
+.lin3 {
+    text-align: center;
+}

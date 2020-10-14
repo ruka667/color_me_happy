@@ -1,0 +1,23 @@
+<%= form_for @post do |f| %>
+ 
+  <div class="sub">
+  <div class="spa"> </div><br>
+  <h3> e d i t</h3>
+   <div class="title">
+     <%= f.label :image %> </div><br>
+     <div class="fiel1">
+     <%= image_tag @post.image.url %><br>
+     <%= f.file_field :image, class: "image"%>
+   </div>
+ 
+   <div class="title">
+     <%= f.label :text %></div><br>
+     <br>
+     <div class="field2">
+     <%= f.text_area :body, :size => 100 %>
+
+    <div class="botan">
+    <%= f.submit "編集する" %></div>
+  <% end %>
+  </div>
+  

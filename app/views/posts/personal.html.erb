@@ -1,0 +1,127 @@
+
+
+<div class="personal">
+<h1>パーソナルカラー診断</h1>
+</div>
+
+<div class="q">
+
+<%= form_tag(controller: "posts", action: "result") do %>
+    <h2>Q1.瞳の色は？</h2><br>
+    <%= radio_button_tag("r1", "A") %>
+    <%= label_tag("r1_radio_A", "【A】明るめのブラウンorソフトなブラック。キラキラと輝いてみえる") %><br>
+    <%= radio_button_tag("r1", "B") %>
+    <%= label_tag("r1_radio_B", "【B】赤みのブラウンorグレイッシュな黒。黒目と白目の境がやわらかな印象。") %><br>
+    <%= radio_button_tag("r1", "C") %>
+    <%= label_tag("r1_radio_C", "【C】ダークブラウンorブラック。落ち着いた印象がある。") %><br>
+    <%= radio_button_tag("r1", "D") %>
+    <%= label_tag("r1_radio_D", "【D】ブラックor赤みのダークブラウン。白目と黒目のコントラストがくっきり。") %><br>
+    <h2>Q2.髪（地毛）の色は？</h2>
+    <br>
+    <%= radio_button_tag("r2", "A") %>
+    <%= label_tag("r2_radio_A", "【A】陽に当たるとやわらかなブラウン。") %><br>
+    <%= radio_button_tag("r2", "B") %>
+    <%= label_tag("r2_radio_B", "【B】ソフトでやわらかい質感の黒髪。") %><br>
+    <%= radio_button_tag("r2", "C") %>
+    <%= label_tag("r2_radio_C", "【C】深みのあるブラウン。") %><br>
+    <%= radio_button_tag("r2", "D") %>
+    <%= label_tag("r2_radio_D", "【D】コシが強く艶やかではっきりとした黒。") %><br>
+    <h2>Q3.肌の色は？</h2>
+    <br>
+    <%= radio_button_tag("r3", "A") %>
+    <%= label_tag("r3_radio_A", "【A】明るいアイボリー系。皮膚が薄めでツヤがある。") %><br>
+    <%= radio_button_tag("r3", "B") %>
+    <%= label_tag("r3_radio_B", "【B】血色の良い明るめのピンク系。質感はややマットで頬に赤みが出やすい。") %><br>
+    <%= radio_button_tag("r3", "C") %>
+    <%= label_tag("r3_radio_C", "【C】オークル系でマットな質感。くすみやすいことも。") %><br>
+    <%= radio_button_tag("r3", "D") %>
+    <%= label_tag("r3_radio_D", "【D】ピンク系の色白肌、もしくは地黒肌。艶があり血色は感じにくい。") %><br>
+    <h2>Q4.日焼けすると</h2>
+    <br>
+    <%= radio_button_tag("r4", "A") %>
+    <%= label_tag("r4_radio_A", "【A】日焼けしやすいが、もどるのも早い。赤くなることも。") %><br>
+    <%= radio_button_tag("r4", "B") %>
+    <%= label_tag("r4_radio_B", "【B】赤くなりやすい。吸収せずにすぐに元の色に戻る。") %><br>
+    <%= radio_button_tag("r4", "C") %>
+    <%= label_tag("r4_radio_C", "【C】日焼けしやすく、吸収して黒くなる。元の色に戻りにくい。") %><br>
+    <%= radio_button_tag("r4", "D") %>
+    <%= label_tag("r4_radio_D", "【D】やや赤くなり、その後黒くなる。") %><br>
+    <h2>Q5.元の唇の色は？</h2>
+    <br>
+    <%= radio_button_tag("r5", "A") %>
+    <%= label_tag("r5_radio_A", "【A】淡いサーモンピンクorうすめのベージュ系。") %><br>
+    <%= radio_button_tag("r5", "B") %>
+    <%= label_tag("r5_radio_B", "【B】ピンク、ローズ系。") %><br>
+    <%= radio_button_tag("r5", "C") %>
+    <%= label_tag("r5_radio_C", "【C】落ち着いたオレンジorベージュ系。血色は控えめ。") %><br>
+    <%= radio_button_tag("r5", "D") %>
+    <%= label_tag("r5_radio_D", "【D】ローズ系。血色がなく青ざめてみえることも。") %><br>
+    <h2>Q6.しっくりくるリップの色は？</h2>
+    <br>
+    <%= radio_button_tag("r6", "A") %>
+    <%= label_tag("r6_radio_A", "【A】コーラル・オレンジ系。明るくツヤがかった発色。") %><br>
+    <%= radio_button_tag("r6", "B") %>
+    <%= label_tag("r6_radio_B", "【B】ピンク、ローズ系。明るくやわらかな発色。") %><br>
+    <%= radio_button_tag("r6", "C") %>
+    <%= label_tag("r6_radio_C", "【C】くすみオレンジ・ブラウン系。落ち着いた発色。") %><br>
+    <%= radio_button_tag("r6", "D") %>
+    <%= label_tag("r6_radio_D", "【D】フューシャピンク・ボルドー系。鮮やかor深みのある発色。") %><br>
+    <h2>Q7.反対に苦手なリップの色は？</h2>
+    <br>
+    <%= radio_button_tag("r7", "A") %>
+    <%= label_tag("r7_radio_A", "【A】ワイン系。深くて暗めの色だと顔色が悪くなる。") %><br>
+    <%= radio_button_tag("r7", "B") %>
+    <%= label_tag("r7_radio_B", "【B】オレンジ・レッド系。オレンジ系や高発色だと唇だけ目立つ。") %><br>
+    <%= radio_button_tag("r7", "C") %>
+    <%= label_tag("r7_radio_C", "【C】フューシャピンク・ローズ系。青みが強いと肌から浮いて派手になる。") %><br>
+    <%= radio_button_tag("r7", "D") %>
+    <%= label_tag("r7_radio_D", "【D】ベージュ系、薄い色だとパッとせずにぼやける。") %><br>
+
+    <h2>Q8.比較的似合うアクセサリーは？</h2>
+    <br>
+    <%= radio_button_tag("r8", "A") %>
+    <%= label_tag("r8_radio_A", "【A】キラキラしたツヤありゴールド。") %><br>
+    <%= radio_button_tag("r8", "B") %>
+    <%= label_tag("r8_radio_B", "【B】光沢控えめのプラチナ、シルバー。") %><br>
+    <%= radio_button_tag("r8", "C") %>
+    <%= label_tag("r8_radio_C", "【C】黄みの強いゴールドorマットゴールド。") %><br>
+    <%= radio_button_tag("r8", "D") %>
+    <%= label_tag("r8_radio_D", "【D】艶のあるプラチナ、シルバー。") %><br>
+
+    <h2>Q9.ベーシックカラーで得意な色は？</h2>
+    <br>
+    <%= radio_button_tag("r9", "A") %>
+    <%= label_tag("r9_radio_A", "【A】ベージュやキャメルを着ると、顔色が明るく健康的にみえる。") %><br>
+    <%= radio_button_tag("r9", "B") %>
+    <%= label_tag("r9_radio_B", "【B】グレーやネイビーを着ると、肌が白くみえ、上品な印象になる。") %><br>
+    <%= radio_button_tag("r9", "C") %>
+    <%= label_tag("r9_radio_C", "【C】カーキやブラウンを着ても、地味にならずおしゃれな印象になる。") %><br>
+    <%= radio_button_tag("r9", "D") %>
+    <%= label_tag("r9_radio_D", "【D】黒を着ても重たくならずに引き締まってシャープな印象になる。") %><br>
+    <h2>Q10.身近な人に褒められる色は？</h2>
+    <br>
+    <%= radio_button_tag("r10", "A") %>
+    <%= label_tag("r10_radio_A", "【A】黄色やオレンジ、コーラルピンクなどのあたたかみのあるビタミンカラー。") %><br>
+    <%= radio_button_tag("r10", "B") %>
+    <%= label_tag("r10_radio_B", "【B】淡い水色やラベンダーなどの優しげなパステルカラー。") %><br>
+    <%= radio_button_tag("r10", "C") %>
+    <%= label_tag("r10_radio_C", "【C】マスタードやテラコッタなどのこっくりとしたアースカラー。") %><br>
+    <%= radio_button_tag("r10", "D") %>
+    <%= label_tag("r10_radio_D", "【D】ロイヤルブルーやマゼンダなどの鮮やかなビビットカラー。") %><br>
+
+    <h2>Q11.周りからよく言われる第一印象は？</h2>
+    <br>
+    <%= radio_button_tag("r11", "A") %>
+    <%= label_tag("r11_radio_A", "【A】年齢より若く見える、親しみやすい、明るい。") %><br>
+    <%= radio_button_tag("r11", "B") %>
+    <%= label_tag("r11_radio_B", "【B】優しげ、爽やか、品がある。") %><br>
+    <%= radio_button_tag("r11", "C") %>
+    <%= label_tag("r11_radio_C", "【C】落ち着ている、穏やか、ナチュラル。") %><br>
+    <%= radio_button_tag("r11", "D") %>
+    <%= label_tag("r11_radio_D", "【D】クール、華やか、印象が強い。") %><br>
+
+    <%= submit_tag("Check!") %>
+<% end%>
+</div>
+
+

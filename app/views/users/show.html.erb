@@ -1,0 +1,60 @@
+<div class="maall">
+<div class="spa"> </div><br>
+<div class="mypa">
+<h5>User page</h5>
+<p>name : <%= @user.name %></p>
+<p>adress : <%= @user.email %></p>
+<p>profile : <%= @user.profile %></p>
+<div class="lin">
+<% if current_user.id == @user.id %>
+
+  <%= link_to " edit", edit_user_registration_path , class:"fas fa-edit" %><br>
+  <%= link_to 'sign out', destroy_user_session_path, method: :delete , class:"fas fa-sign-out-alt" %>
+<% end %>
+<div class="spa"> </div><br>
+</div>
+</div>
+ <br>
+ <h6>-Users posts-</h6>
+ <div class="posts-container">
+  
+<% @user.posts.each do |p| %>
+  <% if user_signed_in? && current_user.id == p.user_id %> 
+  <div class="post">
+  <%= image_tag p.image_url, size: "250x200" if p.image? %><br>
+  <% if user_signed_in? %>
+    <% if current_user.already_liked?(p) %>
+        <%= link_to post_like_path(id: p.id, post_id: p.id), method: :delete do %>
+          <i class="fas fa-heart"></i><%= p.likes.count %>
+        <% end %>
+    <% else %>
+        <%= link_to post_likes_path(id: p.id, post_id: p.id), method: :post do %>
+          <i class="far fa-heart"></i><%= p.likes.count %>
+        <% end %>
+    <% end %>
+  <a href="/users/<%= p.user.id %>"><%= p.user.name %></a><br>
+    <%= p.body %><br>
+  
+    <%= I18n.l p.created_at, format: :short %><br>
+    
+    
+<% else %>
+<i class="far fa-heart"></i><%= p.likes.count %>
+<% end %>
+    <%= link_to "more", post_path(p.id) %>
+    <% if user_signed_in? && current_user.id == p.user_id %>  
+     <%= link_to "edit", edit_post_path(p.id) %>
+     <%= link_to "delete", post_path(p.id), method: :delete %>
+    <% end %> 　　
+    </div>
+ 
+<% end %>
+<% end %>
+
+</div>
+<div class="lin">
+<%= link_to "投稿一覧に戻る", posts_path %></div>
+
+</div>
+
+</div>

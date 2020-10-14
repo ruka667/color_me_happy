@@ -1,0 +1,76 @@
+
+
+<div class="kekka">
+<h4>あなたの診断結果は・・・</h4>
+<div class="kazu">
+A<%= @nA %> 個</div>
+<div class="kazu">
+B <%= @nB %>個</div>
+<div class="kazu">
+C<%= @nC %>個</div>
+<div class="kazu">
+D<%= @nD %>個</div>
+</div>
+</div>
+
+<div class="answer">
+<section>ーー1番多く選んだところがあなたのタイプですーー</section>
+<br>
+<div class="A">
+<p>Aを選んだあなたは・・・春タイプ</p>
+<br>
+春タイプは、親しみやすくキュートで、実年齢より若く見える人が多いのが特徴です。<br>
+イメージは、春の暖かい日差しの中で輝く花々や新緑、フレッシュなフルーツの色です。<br>
+艶のあるイエローベースで明るくクリアな色が似合います。イエロー、ミルクホワイト、ベージュ、コーラルピンク、オレンジなど。<br>
+アクセサリーはゴールドがおすすめ。<br>
+<%= link_to '→spring 投稿一覧へ', :controller => "posts", :action => "spring" %>
+</div>
+<div class="image">
+<%= image_tag 'haru.png' %>
+</div>
+<br>
+<div class="B">
+<p>Bを選んだあなたは・・・夏タイプ</p>
+<br>
+夏タイプは、優しげで落ち着きのある、上品でエレガントな印象の人が多いのが特徴です。<br>
+イメージは梅雨の時期に咲く綺麗な紫陽花の色、優し気でくすみのあるグレーがかった色です。<br>
+涼し気なブルーベースの明るくソフトな色が似合います。ベビーピンク、ベビーブルー、ラベンダー、ライトグレー、ココアブラウンなど。<br>
+アクセサリーはシルバーがおすすめ。<br>
+<%= link_to '→summer 投稿一覧へ', :controller => "posts", :action => "summer" %>
+</div>
+<div class="image">
+<%= image_tag 'natsu.png' %>
+</div>
+<br>
+<div class="C">
+<p>Cを選んだあなたは・・・秋タイプ</p>
+<br>
+秋タイプは、知的で大人っぽく、穏やかな雰囲気をもたれている人が多いのが特徴です。<br>
+イメージは、秋の山々に広がる美しい紅葉の色、栗やカボチャなどのこっくりとした自然な色です。<br>
+暖かみのあるイエローベースで、深くリッチな色が似合います。カーキ、テラコッタ、マスタード、コーヒーブラウン、ターコイズブルーなど。<br>
+アクセサリーはゴールドがおすすめ。<br>
+<%= link_to '→autumn 投稿一覧へ', :controller => "posts", :action => "autumn" %>
+</div>
+<div class="image">
+<%= image_tag 'aki.png' %>
+</div>
+<br>
+<div class="D">
+<p>Dを選んだあなたは・・・冬タイプ</p>
+<br>
+冬タイプは、個性的で人目をひくような存在感があり、シャープでクールな人が多いのが特徴です。<br>
+イメージは、冬の夜空にキラキラと輝くイルミネーションや、町中を彩るクリスマスのカラー、色とりどりの美しい宝石の色です。<br>
+冷たいブルーベースで鮮やかな色やきりっとした色が似合います。マゼンタ、チャコールグレー、ロイヤルブルー、バーガンディーなど。<br>
+アクセサリーはシルバーがおすすめ。<br>
+<%= link_to '→winter 投稿一覧へ', :controller => "posts", :action => "winter" %>
+</div>
+<div class="image">
+<%= image_tag 'fuyu.png' %>
+</div>
+<script>
+int a
+int b 
+int c 
+int d
+
+</script>

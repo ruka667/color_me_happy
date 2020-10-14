@@ -1,0 +1,21 @@
+.show {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+.lin2 {
+    text-align: center;
+}
+        
+.lin2 a{
+text-align: center;
+text-decoration: none;
+color: black;
+font-size: 19px;
+}
+
+.showall {
+    background-image: url(back2.png);
+    background-size: cover;
+}

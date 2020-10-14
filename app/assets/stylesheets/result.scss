@@ -1,0 +1,25 @@
+
+.kekka {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    margin: 20px 50px 100px 50px;
+    background-image: url(jud.jpeg);
+    background-size: cover;
+}
+
+
+h4 {
+    font-size: 50px;
+    margin: 20px;
+    font-family: "Hiragino Kaku Gothic Pro", "ヒラギノ角ゴ Pro W3", "メイリオ", Meiryo, "ＭＳ Ｐゴシック", sans-serif;
+    color: white;
+}
+
+.kazu {
+   font-size: 50px;
+   font-family: 'Cambria Math',sans-serif;
+   margin: 20px;
+  color: white;
+}

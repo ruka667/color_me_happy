@@ -1,0 +1,73 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, or any plugin's
+ * vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any other CSS/SCSS
+ * files in this directory. Styles in this file should be added after the last require_* statement.
+ * It is generally better to create a new file per style scope.
+ *
+ *= require_tree .
+ *= require_self
+ */
+ * {
+    padding: 0;
+    margin: 0;
+  }
+  body {
+    font-family: "Hiragino Kaku Gothic Pro", "ヒラギノ角ゴ Pro W3", "メイリオ",
+      Meiryo, "ＭＳ Ｐゴシック", sans-serif;
+  }
+  header {
+    background-color: rgba(97, 93, 93, 0.38);
+    height: 85px;
+    font-weight: bold;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    margin-left: 150px;
+  
+  }
+  header a {
+    color: white;
+    text-decoration: none; 
+  }
+  header h1 {
+    color: white;
+    margin-left: 20px;
+  }
+  .header-list {
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: right;
+    top: 0%;
+  }
+  header ul {
+    display: flex;
+  }
+  header li {
+    list-style: none;
+    margin-right: 20px;
+  }
+  footer {
+    color: white;
+    height: 30px;
+    background-color: rgba(97, 93, 93, 0.38);
+    bottom: 0;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: auto;
+  }
+  .translation_missing{
+    color: white;
+    opacity: 0;
+  }
+
+  
+
+ 

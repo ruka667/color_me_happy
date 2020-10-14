@@ -1,0 +1,44 @@
+<div class="autumn">
+<div class="spa"> </div><br>
+<h3>autumn</h3>
+<div class="lin">
+<%= link_to 'all・', :controller => "posts", :action => "all" %>
+<%= link_to 'spring・', :controller => "posts", :action => "spring" %>
+  <%= link_to 'summer・', :controller => "posts", :action => "summer" %>
+  <%= link_to 'autumn・', :controller => "posts", :action => "autumn" %>
+  <%= link_to 'winter・', :controller => "posts", :action => "winter" %>
+</div>
+  <div class="posts-container">
+  <% @autumns.each do |p| %>
+      <div class="post">
+      <%= image_tag p.image_url, size: "250x200" if p.image? %><br>
+      <% if user_signed_in? %>
+        <% if current_user.already_liked?(p) %>
+            <%= link_to post_like_path(id: p.id, post_id: p.id), method: :delete do %>
+              <i class="fas fa-heart"></i><%= p.likes.count %>
+            <% end %>
+        <% else %>
+            <%= link_to post_likes_path(id: p.id, post_id: p.id), method: :post do %>
+              <i class="far fa-heart"></i><%= p.likes.count %>
+            <% end %>
+        <% end %>
+      <a href="/users/<%= p.user.id %>"><%= p.user.name %></a><br>
+        <%= p.body %><br>
+        <%= I18n.l p.created_at, format: :short %><br>
+        
+        
+    <% else %>
+    <i class="far fa-heart"></i><%= p.likes.count %>
+    <% end %>
+        <%= link_to "more", post_path(p.id) %>
+        <% if user_signed_in? && current_user.id == p.user_id %>  
+         <%= link_to "edit", edit_post_path(p.id) %>
+         <%= link_to "delete", post_path(p.id), method: :delete %>
+        <% end %> 　　
+        </div>
+      
+    <% end %>
+    </div>
+    <%= page_entries_info @autumns %>
+<%= paginate @autumns %>
+</div>
