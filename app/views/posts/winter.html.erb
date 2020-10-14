@@ -15,7 +15,7 @@
   <% @winters.each do |p| %>
       <div class="post">
       <%= image_tag p.image_url, size: "250x200" if p.image? %><br>
-      <% if user_signed_in? %
+      <% if user_signed_in? %>
         <% if current_user.already_liked?(p) %>
             <%= link_to post_like_path(id: p.id, post_id: p.id), method: :delete do %>
               <i class="fas fa-heart"></i><%= p.likes.count %>
