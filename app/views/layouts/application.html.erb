@@ -21,7 +21,10 @@
       <span class="hamburger hamburger-2"></span>
       <span class="hamburger hamburger-3"></span>
     </label>
-    <a href="/users/<%= current_user.id %>" class="menu-item"><i class="fa fa-house-user "></i></a>
+    <% if user_signed_in? %>
+    <a href="/users/<%= current_user.id %>" class="menu-item"><i class="fa fa-user "></i></a>
+    <% end %>
+    
     <a href="/posts/new.html" class="menu-item"> <i class="fa fa-folder-plus" ></i> </a>
     <a href="/posts/all.html" class="menu-item"> <i class="fa fa-camera-retro" data-fa-transform="shrink-8 up-6"></i> </a>
     
