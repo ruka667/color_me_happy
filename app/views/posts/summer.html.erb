@@ -23,14 +23,15 @@
               <i class="far fa-heart"></i><%= p.likes.count %>
             <% end %>
         <% end %>
-      <a href="/users/<%= p.user.id %>"><%= p.user.name %></a><br>
-        <%= p.body %><br>
-        <%= I18n.l p.created_at, format: :short %><br>
-        
+      
         
     <% else %>
     <i class="far fa-heart"></i><%= p.likes.count %>
     <% end %>
+    <a href="/users/<%= p.user.id %>"><%= p.user.name %></a><br>
+        <%= p.body %><br>
+        <%= I18n.l p.created_at, format: :short %><br>
+        
         <%= link_to "more", post_path(p.id) %>
         <% if user_signed_in? && current_user.id == p.user_id %>  
          <%= link_to "edit", edit_post_path(p.id) %>
