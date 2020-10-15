@@ -22,17 +22,27 @@
       <span class="hamburger hamburger-3"></span>
     </label>
     <% if user_signed_in? %>
-    <a href="/users/<%= current_user.id %>" class="menu-item"><i class="fa fa-user "></i></a>
+    <%= link_to user_path(current_user.id),class:"menu-item" do %>
+      <i class="fas fa-user "></i></a>
+      <% end %>
     <% else %>
-    <a href="/users/sign_in/" class="menu-item"> <i class="fa fa-sign-in-alt" ></i> </a>
+    <%= link_to new_user_session_path,class:"menu-item" do %>
+      <i class="fas fa-sign-in-alt "></i></a>
+      <% end %>
     <% end %>
     
+    <%= link_to posts_new_path,class:"menu-item" do %>
+      <i class="fas fa-folder-plus "></i></a>
+      <% end %>
+    
+   <%= link_to posts_all_path,class:"menu-item" do %>
+        <i class="fas fa-camera-retro"></i></a>
+        <% end %> 
 
+        <%= link_to root_path,class:"menu-item" do %>
+          <i class="fas fa-home"></i></a>
+          <% end %> 
     
-    <a href="/posts/new/" class="menu-item"> <i class="fa fa-folder-plus" ></i> </a>
-    <a href="/posts/all/" class="menu-item"> <i class="fa fa-camera-retro" data-fa-transform="shrink-8 up-6"></i> </a>
-    
-    <a href="/" class="menu-item"> <i class="fa fa-home data-fa-transform="shrink-8 up-6"></i> </a>
     
   </nav>
   
